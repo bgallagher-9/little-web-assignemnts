@@ -47,19 +47,13 @@ table {
 	border-spacing: 0;
 }
 
-h1 {
-  font-size: 4em;
-  font-family: helvetica, sans-serif;
-  font-weight: bolder;
-  background-color: lightgrey;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 20px auto;
-
-}
-
-p {
-  color: lightblue;
+.container {
+  background-color: tan;
   max-width: 600px;
   margin: 0 auto 0 auto;
+}
+
+h1 {
+  border: solid 1px red;
+  text-align: center;
 }
