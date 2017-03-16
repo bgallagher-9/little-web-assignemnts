@@ -46,3 +46,47 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	overflow: auto;
+	border: #D3D9DB 1px solid;
+	padding: 10px 40px;
+	background-color: rgba(255, 255, 255, .9)
+}
+
+nav li {
+	float: left;
+  font-family:sans-serif, Helvetica, Verdana;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+.search {
+	float: right;
+	font-family: helvetica, verdana sans-serif;
+	text-transform: uppercase;
+}
+
+.header {
+	/*position: absolute;*/
+	/*top:0;*/
+	margin: -20px auto;
+	text-transform: uppercase;
+	font-size: 150px;
+	font-family: sans-serif, helvetica, sans-serif;
+	color: black;
+	font-weight: 600;
+	text-align: center;
+}
+
+.bgimage {
+	background-image: url(alpimage.jpg);
+	background-repeat: no-repeat;
+	position: relative;
+	background-size: contained;
+	height: 400px;
+}
