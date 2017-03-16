@@ -153,3 +153,55 @@ nav .logo {
   color: brown;
   transition: .25s;
 }
+
+
+
+/*Recent Projects*/
+
+.recent-projects {
+  padding: 50px 0;
+  overflow: auto;
+}
+
+.project-row {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.project {
+  background-color: gray;
+  float: left;
+  height: 200px;
+  outline: solid 1px red;
+  width: 33.33333%;
+}
+
+
+/*Full Story*/
+
+.story {
+  background-color: rgb(100, 107, 111);
+  padding: 50px;
+}
+
+.story-details {
+  border: solid 1px yellow;
+  height: 400px;
+  width: 50%;
+}
+
+
+/*what i do*/
+.what-i-do {
+  overflow: auto;
+  margin: auto 0;
+  padding: 10%;
+}
+
+.particular-thing {
+  width: 25%;
+  float: left;
+  outline: solid 1px red;
+  background-color; grey;
+  height: 200px;
+}
