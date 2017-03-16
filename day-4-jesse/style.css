@@ -1,0 +1,155 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+nav {
+  overflow: auto;
+  padding: 17px 40px;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+nav li{
+  float: right;
+  font-family:sans-serif, Helvetica, Verdana;
+  text-transform: uppercase;
+  margin: 5px 10px 0 10px;
+}
+
+nav a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: yellow;
+  background-color: transparent;
+}
+
+body {
+  background-color: #333;
+}
+
+nav .logo {
+  background-image: url('logo-jesseshowalter-white.svg');
+  background-repeat: no-repeat;
+  background-size: 22px;
+  color: transparent;
+  float: left;
+  height: 34px;
+  margin: 0;
+}
+
+.bgimage {
+  background-image: url("http://www.jesseshowalter.com/assets/images/jesse-jump.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  height: 800px;
+  position: relative;
+}
+
+.background {
+  background-color: rgba(0, 0, 0, .4);
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  height: 800px;
+}
+
+.container {
+  max-width: 1300px;
+  text-align: center;
+  margin: auto;
+  /*border: 2px solid red;*/
+}
+
+.header1 {
+  font-family: "merriweather","serif";
+  font-size: 3.2rem;
+  color: #FFF;
+  max-width: 40%;
+  margin: 13% auto 5%;
+  font-weight: 100;
+  /*border: solid red 2px;*/
+}
+
+.header2 {
+  font-family: "Open Sans",sans-serif;
+  /*font-weight: 100;*/
+  color: #fff;
+  /*border: solid red 2px;*/
+  line-height: 2.3rem;
+  font-size: 1.4rem;
+  max-width: 80%;
+  margin: 5% auto 5%;
+}
+
+.button {
+  font-family: "Open Sans",sans-serif;
+  color: #fff;
+  line-height: 2.3rem;
+  font-size: 1.4rem;
+  margin: 5% auto 5%;
+  border: solid #e0cb77 2.5px;
+  width: 400px;
+  /*height: 250px:*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.button:hover {
+  background-color: :#e0cb77;
+  color: brown;
+  transition: .25s;
+}
