@@ -47,6 +47,16 @@ table {
 	border-spacing: 0;
 }
 
+.logo {
+	background-image: url('alpicon.svg');
+  background-repeat: no-repeat;
+  background-size: 22px;
+  color: transparent;
+  float: left;
+  height: 34px;
+  margin: 0;
+}
+
 nav {
 	position: fixed;
 	top: 0;
@@ -54,7 +64,7 @@ nav {
 	left: 0;
 	overflow: auto;
 	border: #D3D9DB 1px solid;
-	padding: 10px 40px;
+	padding: 7px 40px;
 	background-color: rgba(255, 255, 255, .9)
 }
 
@@ -67,8 +77,16 @@ nav li {
 
 .search {
 	float: right;
-	font-family: helvetica, verdana sans-serif;
-	text-transform: uppercase;
+	background-image: url('magicon.svg');
+  background-repeat: no-repeat;
+	background-color: #000;
+	border: 1px solid #000;
+	width: 30px;
+	height: 19px;
+	border-radius: 14px;
+  color: transparent;
+	display: block;
+	align-items: right;
 }
 
 .header {
@@ -84,36 +102,71 @@ nav li {
 }
 
 div.bgimage img {
-	height: 80%;
-	width: 80%;
+	height: 67%;
+	width: 67%;
 	/*border: 2px solid red;*/
 	display: block;
 	margin: 0 auto;
 }
 
 header {
-	padding: 35px 0;
-
+	padding: 20px 0;
 	width: 30%;
 	margin: 0 auto;
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	text-transform: uppercase;
 	font-family: sans-serif, helvetica, sans-serif;
 	font-weight: 600;
+	overflow: auto;
+	text-align: center;
 }
 
 div.newbox {
 	border: 1px solid red;
-	width: 50px;
-	height: 25px;
+	width: 45px;
+	height: 17px;
 	background-color: red;
-	margin: 0 auto;
-	text-align: center;
-	overflow: auto;
+	border-radius: 7px;
+	float: left;
+	color: white;
 }
 
 div.pubdate {
+	width: 125px;
+	/*border: 1px solid red;*/
 	float: left;
-	width: 150px;
-	border: 1px solid red;
+}
+
+.pubdeets {
+	width: 70%;
+	padding: 20px;
+	font-family: sans-serif, helvetica, sans-serif;
+	margin: 0 auto;
+}
+
+.pubname {
+	text-align: center;
+	padding: 10px;
+	font-size: 2.2em;
+	font-weight: 700;
+}
+
+.pubauth {
+	text-align: center;
+	font-weight: 500;
+	color: blue;
+	padding: 10px;
+}
+
+.para {
+	font-family: georgia, serif;
+	font-size: 24px;
+	line-height: 36px;
+	text-align: left;
+	padding: 10px;
+}
+
+span {
+	color: black;
+	font-weight: 300;
 }
