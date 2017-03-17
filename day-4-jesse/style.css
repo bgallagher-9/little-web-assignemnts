@@ -75,10 +75,6 @@ li a:hover {
   background-color: transparent;
 }
 
-body {
-  background-color: #333;
-}
-
 nav .logo {
   background-image: url('logo-jesseshowalter-white.svg');
   background-repeat: no-repeat;
@@ -149,7 +145,7 @@ nav .logo {
 }
 
 .button:hover {
-  background-color: :#e0cb77;
+  background-color: #e0cb77;
   color: brown;
   transition: .25s;
 }
@@ -159,7 +155,7 @@ nav .logo {
 /*Recent Projects*/
 
 .recent-projects {
-  padding: 50px 0;
+  padding: 50px 50px;
   overflow: auto;
 }
 
@@ -169,11 +165,38 @@ nav .logo {
 }
 
 .project {
-  background-color: gray;
   float: left;
-  height: 200px;
-  outline: solid 1px red;
-  width: 33.33333%;
+  width: 28.3333%;
+	margin: 0 2% 4%;
+	/*border: 2px solid green;*/
+	padding-right: 12px;
+}
+
+.project img , h3, p {
+	max-width: 100%;
+	text-align: center;
+	line-height: 2em;
+	/*border: 2px solid red;*/
+	text-decoration: none;
+
+}
+
+.project h3 {
+	font-size: 2em;
+	color: #3195C2;
+	font-weight: 300;
+	font-family: "Merriweather";
+	padding-top: 20px;
+	padding-bottom: 20px
+
+}
+
+.project p {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 18px;
+	color: #8492a4;
 }
 
 

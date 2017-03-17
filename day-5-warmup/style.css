@@ -47,73 +47,53 @@ table {
 	border-spacing: 0;
 }
 
-nav {
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	overflow: auto;
-	border: #D3D9DB 1px solid;
-	padding: 10px 40px;
-	background-color: rgba(255, 255, 255, .9)
-}
-
-nav li {
-	float: left;
+body {
   font-family:sans-serif, Helvetica, Verdana;
-  text-transform: uppercase;
-  margin: 0 10px;
-}
-
-.search {
-	float: right;
-	font-family: helvetica, verdana sans-serif;
-	text-transform: uppercase;
-}
-
-.header {
-	/*position: absolute;*/
-	/*top:0;*/
-	margin: -20px auto;
-	text-transform: uppercase;
-	font-size: 150px;
-	font-family: sans-serif, helvetica, sans-serif;
-	color: black;
-	font-weight: 600;
-	text-align: center;
-}
-
-div.bgimage img {
-	height: 80%;
-	width: 80%;
-	/*border: 2px solid red;*/
-	display: block;
-	margin: 0 auto;
 }
 
 header {
-	padding: 35px 0;
-
-	width: 30%;
-	margin: 0 auto;
-	border: 1px solid red;
-	text-transform: uppercase;
-	font-family: sans-serif, helvetica, sans-serif;
-	font-weight: 600;
+  padding: 30px 15%;
+  background-color: black;
+  color: white;
+  height: 15%;
+  font-size: 2em;
 }
 
-div.newbox {
-	border: 1px solid red;
-	width: 50px;
-	height: 25px;
-	background-color: red;
-	margin: 0 auto;
-	text-align: center;
-	overflow: auto;
+.twocolumn  {
+  width: 70%;
+  overflow: auto;
+  margin: 0 auto;
+  border: 2px solid red;
 }
 
-div.pubdate {
-	float: left;
-	width: 150px;
-	border: 1px solid red;
+.col1 {
+  width: 30%;
+  background-color: pink;
+  height: 700px;
+  float: left;
+}
+
+.col2 {
+  width: 70%;
+  background-color: yellow;
+  height: 700px;
+  float: left;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: green;
+  position: relative;
+  top: -20px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px 15%;
+  height: 5%;
+font-size: 2em;
 }
