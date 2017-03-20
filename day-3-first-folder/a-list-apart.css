@@ -53,8 +53,8 @@ table {
   background-size: 22px;
   color: transparent;
   float: left;
-  height: 34px;
-  margin: 0;
+  height: 30px;
+  margin: 10px 10px 0;
 }
 
 nav {
@@ -72,7 +72,7 @@ nav li {
 	float: left;
   font-family:sans-serif, Helvetica, Verdana;
   text-transform: uppercase;
-  margin: 0 10px;
+  margin: 10px 10px 0;
 }
 
 .search {
@@ -87,6 +87,7 @@ nav li {
   color: transparent;
 	display: block;
 	align-items: right;
+	margin: 10px 10px 0;
 }
 
 .header {
@@ -99,6 +100,7 @@ nav li {
 	color: black;
 	font-weight: 600;
 	text-align: center;
+	/*border: 2px solid red;*/
 }
 
 div.bgimage img {
@@ -110,14 +112,13 @@ div.bgimage img {
 }
 
 header {
-	padding: 20px 0;
+	/*padding: 20px 0;*/
 	width: 30%;
-	margin: 0 auto;
+	margin: 20px auto;
 	/*border: 1px solid red;*/
 	text-transform: uppercase;
 	font-family: sans-serif, helvetica, sans-serif;
 	font-weight: 600;
-	overflow: auto;
 	text-align: center;
 }
 
@@ -127,14 +128,16 @@ div.newbox {
 	height: 17px;
 	background-color: red;
 	border-radius: 7px;
-	float: left;
 	color: white;
+	display: inline-block;
+	vertical-align: baseline;
 }
 
 div.pubdate {
 	width: 125px;
 	/*border: 1px solid red;*/
-	float: left;
+	display: inline-block;
+	vertical-align: baseline;
 }
 
 .pubdeets {
