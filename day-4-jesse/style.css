@@ -155,21 +155,34 @@ nav .logo {
 /*Recent Projects*/
 
 .recent-projects {
-  padding: 50px 50px;
+  /*padding: 50px auto;*/
   overflow: auto;
-}
-
-.project-row {
-  margin: 0 auto;
+	margin: 20px auto;
   width: 90%;
 }
 
 .project {
   float: left;
   width: 28.3333%;
-	margin: 0 2% 4%;
+	margin: 0 2% 50px 2%;
+	text-align: center;
 	/*border: 2px solid green;*/
-	padding-right: 12px;
+	/*padding-right: 12px;*/
+}
+
+@media (max-width: 1100px) {
+	.project {
+		width: 45.7%;
+		font-size: 80%;
+	}
+}
+
+@media (max-width: 500px) {
+	.project {
+		width: 95.7%;
+		/*font-size: 70%;*/
+		float: none;
+	}
 }
 
 .project img , h3, p {
@@ -203,28 +216,76 @@ nav .logo {
 /*Full Story*/
 
 .story {
-  background-color: rgb(100, 107, 111);
-  padding: 50px;
+  /*background-color: rgb(100, 107, 111);*/
+	background-image: url(banner-working.jpg);
+	background-position: center;
+	background-size: cover;
+	background-color: #272D35;
+	z-index: 1;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: auto;
 }
 
 .story-details {
   border: solid 1px yellow;
   height: 400px;
   width: 50%;
+	margin: 0 70px;
+	padding: 60px;
+}
+
+.quote {
+	font-size: 2.9em;
+	color: #E0CB77;
+	font-weight: 700;
+	font-family: 'Merriweather',serif;
+	line-height: 2em;
+}
+
+.bio-story {
+	font-family: "Open Sans",sans-serif;
+	margin: 1.2em 0;
+	font-weight: 100;
+	line-height: 2.4em;
 }
 
 
 /*what i do*/
 .what-i-do {
   overflow: auto;
-  margin: auto 0;
-  padding: 10%;
+  margin: 20px auto;
+	outline: solid 1px red;
+	text-align: center;
+	max-width: 960px;
 }
 
-.particular-thing {
+.what-i-do img {
+	max-width: 90%;
+	text-decoration: none;
+	background-size: 75px;
+}
+
+.particular-thing1 {
+  width: 25%;
+  float: left;
+  /*outline: solid 1px red;*/
+}
+
+.particular-thing2 {
+  width: 25%;
+  float: left;
+  /*outline: solid 1px red;*/
+}
+
+.particular-thing3 {
+  width: 25%;
+  float: left;
+  /*outline: solid 1px red;*/
+}
+
+.particular-thing4 {
   width: 25%;
   float: left;
   outline: solid 1px red;
-  background-color; grey;
-  height: 200px;
 }
