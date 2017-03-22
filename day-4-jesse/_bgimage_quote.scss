@@ -50,7 +50,7 @@
   line-height: 2.3rem;
   font-size: 1.4rem;
   margin: 5% auto 5%;
-  border: solid #e0cb77 2.5px;
+  border: solid $together-button-color 2.5px;
   width: 400px;
   /*height: 250px:*/
   padding-top: 20px;
@@ -58,7 +58,7 @@
 }
 
 .button:hover {
-  background-color: #e0cb77;
+  background-color: $together-button-color;
   color: brown;
   transition: .25s;
 }
