@@ -1,0 +1,64 @@
+.bgimage {
+  background-image: url("http://www.jesseshowalter.com/assets/images/jesse-jump.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  height: 800px;
+  position: relative;
+}
+
+.background {
+  background-color: rgba(0, 0, 0, .4);
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  height: 800px;
+}
+
+.container {
+  max-width: 1300px;
+  text-align: center;
+  margin: auto;
+  /*border: 2px solid red;*/
+}
+
+.header1 {
+  font-family: "merriweather","serif";
+  font-size: 3.2rem;
+  color: #FFF;
+  max-width: 40%;
+  margin: 13% auto 5%;
+  font-weight: 100;
+  /*border: solid red 2px;*/
+}
+
+.header2 {
+  font-family: "Open Sans",sans-serif;
+  /*font-weight: 100;*/
+  color: #fff;
+  /*border: solid red 2px;*/
+  line-height: 2.3rem;
+  font-size: 1.4rem;
+  max-width: 80%;
+  margin: 5% auto 5%;
+}
+
+.button {
+  font-family: "Open Sans",sans-serif;
+  color: #fff;
+  line-height: 2.3rem;
+  font-size: 1.4rem;
+  margin: 5% auto 5%;
+  border: solid #e0cb77 2.5px;
+  width: 400px;
+  /*height: 250px:*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.button:hover {
+  background-color: #e0cb77;
+  color: brown;
+  transition: .25s;
+}

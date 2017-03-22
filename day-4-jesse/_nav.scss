@@ -1,0 +1,37 @@
+nav {
+  overflow: auto;
+  padding: 17px 40px;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+nav li{
+  float: right;
+  font-family:sans-serif, Helvetica, Verdana;
+  text-transform: uppercase;
+  margin: 5px 10px 0 10px;
+}
+
+nav a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+nav .logo {
+  background-image: url('logo-jesseshowalter-white.svg');
+  background-repeat: no-repeat;
+  background-size: 22px;
+  color: transparent;
+  float: left;
+  height: 34px;
+  margin: 0;
+}
+
+li a:hover {
+  color: yellow;
+  background-color: transparent;
+}

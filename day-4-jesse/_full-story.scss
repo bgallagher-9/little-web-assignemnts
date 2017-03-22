@@ -1,0 +1,34 @@
+.story {
+  /*background-color: rgb(100, 107, 111);*/
+	background-image: url(banner-working.jpg);
+	background-position: center;
+	background-size: cover;
+	background-color: #272D35;
+	z-index: 1;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: auto;
+}
+
+.story-details {
+  border: solid 1px yellow;
+  height: 400px;
+  width: 50%;
+	margin: 0 70px;
+	padding: 60px;
+}
+
+.quote {
+	font-size: 2.9em;
+	color: #E0CB77;
+	font-weight: 700;
+	font-family: 'Merriweather',serif;
+	line-height: 2em;
+}
+
+.bio-story {
+	font-family: "Open Sans",sans-serif;
+	margin: 1.2em 0;
+	font-weight: 100;
+	line-height: 2.4em;
+}
