@@ -1,0 +1,13 @@
+.image-caption {
+  float: right;
+  text-align: right;
+  display: inline-block;
+  color: grey;
+  line-height: 30px;
+}
+
+.image-caption img {
+  width: 20px;
+  border: none;
+  border-radius: 5%;
+}

@@ -1,0 +1,33 @@
+.image-footer {
+  padding: 10px 0 8px 8px;
+  overflow: auto;
+  position: relative;
+  border-bottom: 2px solid lightgrey;
+}
+
+.image-footer p {
+  float: right;
+  color: grey;
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  right: 3px;
+  font-size: 25px;
+}
+
+.image-footer span {
+  font-weight: bold;
+}
+
+.image-footer .image-number {
+  display: inline-block;
+  line-height: 20px;
+  color: lightgrey;
+  padding-top: 5px
+}
+
+.image-footer a {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+}
