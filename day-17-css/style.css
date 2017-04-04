@@ -1,3 +1,8 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,56 +47,42 @@ table {
 	border-spacing: 0;
 }
 
-.container {
-  max-width: 90%;
-  overflow: auto;
-  position: relative;
-  margin: 0 auto;
+.cool-box {
+	background-color: red;
+	height: 100px;
+	width: 100px;
+	transition: 2s;
 }
 
-.box {
-  width: 20%;
-  float: left;
-  /*margin: 0 auto;*/
+.cool-box:hover {
+	background-color: yellow;
+	height: 400px;
+	width: 400px;
+	transition: 2s;
 }
 
-.cirtog {
-  border: 5px solid #000;
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  margin: 0 auto;
-  text-align: center;
-  justify-content: center;
+.animate-me {
+	margin-top: 30px;
+	height: 200px;
+	width: 200px;
+	background-color: skyblue;
+	/*animation-duration: 3s;
+	animation-name: doThing;*/
 }
 
-.nametog {
-  padding-top: 65px;
+@keyframes doThing {
+  from {
+    margin-left: 100%;
+    width: 0%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
-.togciron {
-  border: 5px solid #05FC16;
-  background-color: #B6F2BA;
-}
-
-.togciroff {
-  border: 5px solid #000;
-  background-color: #fff;
-}
-
-ol {
-
-	overflow: auto;
-	margin: 20px;
-}
-
-li {
-	border: 5px solid #000;
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  margin: 20px;
-  text-align: center;
-  justify-content: center;
-	float: left;
+.do-the-animation {
+	animation-duration: 3s;
+	animation-name: doThing;
 }
