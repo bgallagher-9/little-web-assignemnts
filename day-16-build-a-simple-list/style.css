@@ -53,3 +53,8 @@ li {
   width: 200px;
   padding: 10px;
 }
+
+div {
+	border-left: grey solid 2px;
+	margin: 10px;
+}

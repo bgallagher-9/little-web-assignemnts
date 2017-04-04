@@ -4,11 +4,10 @@ var juncir = document.querySelector('#june');
 var milcir = document.querySelector('#milo');
 var dulcir = document.querySelector('#dulce');
 
-
 function theToggleBri() {
   bricir.classList.toggle('togciron');
   //DONT NEST AN EVENTLISTENER INSIDE AN EVENTLISTENER
-  //it will create new eventlisteners
+  //it will create new eventlisteners that you dont want
   //---------------------------
   // function theToggle2() {
   //   bricir.classList.toggle('togciroff');
