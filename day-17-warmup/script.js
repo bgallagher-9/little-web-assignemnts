@@ -16,19 +16,19 @@ var groceries = [
 
 
 //Make this function calculate and return the average cost.
-var totalCost = 0;
+
 function averageCost(items) {
-  var space = '';
+  var costTotal = [];
   for (var i = 0; i < items.length; i++) {
-    totalCost += items[i].cost;
-    // console.log(totalCost);
+    costTotal += items.cost;
+    console.log(items.cost);
   }
+
 }
+
 var space = averageCost(groceries);
 // console.log('average', average);
 
-var space = document.querySelector('#costavg');
-space.textContent = totalCost/groceries.length;
 
 //Make this function return the most expensive item.
 // var mostExpensiveItem = [0];
