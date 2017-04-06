@@ -5,16 +5,22 @@ var faceYea = false;
 
 window.addEventListener('scroll', function(eventname) {
 
-  if (window.scrollY > 300 && filledNav === false) {
-    navFill.classList.add('navshrinkfill');
-    navFill.classList.remove('navgrowfill');
+  if (window.scrollY >= 300 && filledNav === false) {
+    navFill.classList.add('navblackfill');
+    navFill.classList.remove('navwhitefill');
     filledNav = true;
   }
-  else if (window.scrollY <= 300 && filledNav === true) {
-    navFill.classList.remove('navshrinkfill');
-    navFill.classList.add('navgrowfill');
-    filledNav = false;
-  }
+  // else if (window.scrollY <= 300 && filledNav === true) {
+  //   navFill.classList.remove('navblackfill');
+  //   navFill.classList.add('navwhitefill');
+  //   filledNav = false;
+  // }
+  // else if (window.scrollY >= 600 && filledNav === true) {
+  //   navFill.classList.remove('navblackfill');
+  //   navFill.classList.remove('navwhitefill');
+  //   navFill.classList.add('navmidfill');
+  //   filledNav = false;
+  // }
 });
 
 window.addEventListener('scroll', function(eventname2) {
