@@ -50,4 +50,4 @@ function play () {
   display = document.querySelector('#display').src = images[currentImageIndex];
 };
 
-var intervalId = setInterval(play, 1500);
+var intervalId;// = setInterval(play, 1500);

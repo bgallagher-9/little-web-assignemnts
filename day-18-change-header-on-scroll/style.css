@@ -90,14 +90,6 @@ nav {
   text-align: center;
   /*transition: height 2s, background-color 2s, transform 2s, color 2s, font-size 2s;*/
 }
-
-/*.content {
-  height: 300px;
-  width: 300px;
-  background-color: red;
-  margin: 600px auto;
-}*/
-
 .trollio {
   height: 200px;
   width: 200px;
@@ -106,17 +98,34 @@ nav {
   right: 0;
   background-image: url('troll.png');
   background-repeat: no-repeat;
+	z-index: 1;
   /*display: inline;*/
 }
 
-.trollio2 {
-  height: 200px;
-  width: 200px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background-image: url('troll.png');
-  transform: scaleX(-1);
-  background-repeat: no-repeat;
-  display: inline;
+.bgimage {
+	background-image: url('bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 700px;
+	width: 100%;
+	position: fixed;
+	top: 100px;
+	left: 0px;
+	right: 0px;
+	z-index: -1;
+}
+
+.bgimage2 {
+	background-image: url('bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 700px;
+	width: 100%;
+	position: fixed;
+	top: 75px;
+	left: 0px;
+	right: 0px;
+	z-index: -1;
+	transition: position 2s;
+	/*height 2s, background-color 2s, transform 2s, color 2s, font-size 2s;*/
 }
