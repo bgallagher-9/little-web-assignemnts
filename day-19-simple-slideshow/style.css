@@ -49,14 +49,13 @@ table {
 
 div {
   margin: 0 auto;
-  height: 300px;
-  width: 500px;
-
+  height: 400px;
+  width: 600px;
 }
 
 img {
-  height: 300px;
-  width: 500px;
+  height: 400px;
+  width: 600px;
   display: inline-block;
 }
 

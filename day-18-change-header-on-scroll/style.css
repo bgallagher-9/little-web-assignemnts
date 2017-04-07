@@ -52,7 +52,7 @@ body {
 }
 
 nav {
-  width: 100%;
+  max-width: 100%;
   height: 100px;
   background-color: white;
   border: 2px solid black;
@@ -82,50 +82,39 @@ nav {
   transition: height 1.5s, background-color 1.5s, color 2s, font-size 1.5s;
 }
 
-.navmidfill {
-  background-color: black;
-  height: 75px;
-  font-size: 1.5em;
-  color: white;
-  text-align: center;
-  /*transition: height 2s, background-color 2s, transform 2s, color 2s, font-size 2s;*/
-}
 .trollio {
-  height: 200px;
-  width: 200px;
+  height: 350px;
+  width: 350px;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  top: 14%;
+  right: 30%;
   background-image: url('troll.png');
   background-repeat: no-repeat;
-	z-index: 1;
-  /*display: inline;*/
+	background-size: cover;
+	background-position: center;
 }
 
 .bgimage {
 	background-image: url('bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 700px;
-	width: 100%;
+	background-position: center;
+	height: 800px;
+	width: 80%;
 	position: fixed;
 	top: 100px;
-	left: 0px;
-	right: 0px;
-	z-index: -1;
+	left: 10%;
+	z-index: -2;
 }
 
-.bgimage2 {
-	background-image: url('bg.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 700px;
-	width: 100%;
+.imageshift {
 	position: fixed;
 	top: 75px;
-	left: 0px;
-	right: 0px;
-	z-index: -1;
-	transition: position 2s;
-	/*height 2s, background-color 2s, transform 2s, color 2s, font-size 2s;*/
+	transition: top 1.5s;
+}
+
+.imageshift2 {
+	position: fixed;
+	top: 100px;
+	transition: top 1.5s;
 }
