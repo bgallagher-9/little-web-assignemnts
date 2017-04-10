@@ -1,0 +1,22 @@
+.fire1 {
+  /*background-image: url('fire-sprite.jpg');*/
+  /*height: 340px;
+  width: 340px;*/
+  background-image: url('fireworks.jpg');
+  height: 100px;
+  width: 100px;
+  /*background-position-x: -75px;
+  background-position-y: -70px;*/
+}
+
+body {
+  /*background-color: black;*/
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}

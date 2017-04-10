@@ -46,12 +46,3 @@ function animate() {
 };
 
 var intervalId = setInterval(animate, 75);
-
-
-// setInterval(function() {
-// positionX -= 120;
-// // console.log(positionX);
-// link.style.backgroundPositionX = positionX + 'px';
-// link.style.backgroundPositionY = positionY + 'px';
-//   // console.log(hi);
-// }, 75);
