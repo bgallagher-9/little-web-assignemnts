@@ -59,7 +59,6 @@ header {
   top: 0;
   left: 0;
   right: 0;
-
 }
 
 #time-to-read {
@@ -72,7 +71,8 @@ header {
 ul {
   margin-right: 20px;
 }
-li a {
+
+ #twitter {
   text-decoration: none;
   float: right;
   display: inline-block;
@@ -80,18 +80,95 @@ li a {
   color: black;
 }
 
+#gplus {
+ text-decoration: none;
+ float: right;
+ display: inline-block;
+ padding: 7px 3px;
+ color: black;
+}
+
+#facebook {
+ text-decoration: none;
+ float: right;
+ display: inline-block;
+ padding: 7px 3px;
+ color: black;
+}
+
+#youtube {
+ text-decoration: none;
+ float: right;
+ display: inline-block;
+ padding: 7px 3px;
+ color: black;
+}
+
 h1 {
   font-size: 35px;
   font-weight: 700;
   padding-top: 10px;
-  padding-left: 10px
+  padding-left: 10px;
+  /*color: red;*/
 }
 
-.social-links-icons {
+#twitter2 {
   height: 98px;
   width: 98px;
   background-image: url('socialspritesheet.png');
-  /*display: none;*/
+  background-position: -98px 0px;
+  display: none;
+  float: right;
+  zoom: .4;
+  margin-top: 20px;
+}
+
+#twitter2:hover {
+  background-position: -98px -98px;
+}
+
+#facebook2 {
+  height: 98px;
+  width: 98px;
+  background-image: url('socialspritesheet.png');
+  display: none;
+  float: right;
+  zoom: .4;
+  margin-top: 20px;
+}
+
+#facebook2:hover {
+	background-position: 0px -98px;
+}
+
+#youtube2 {
+  height: 98px;
+  width: 98px;
+  background-image: url('socialspritesheet.png');
+  background-position: -199px 0px;
+  display: none;
+  float: right;
+  zoom: .4;
+  margin-top: 20px;
+}
+
+#youtube2:hover {
+	background-position: -199px -98px;
+}
+
+#gplus2{
+  height: 98px;
+  width: 98px;
+  background-image: url('socialspritesheet.png');
+  background-position: -600px 0px;
+  display: none;
+  float: right;
+  zoom: .4;
+  margin-top: 20px;
+}
+
+#gplus2:hover {
+	background-position: -600px -98px;
 }
 
 #facebookI {
@@ -134,12 +211,19 @@ h1 {
   background-position: -196px -98px;
 }
 
-
 .container {
   max-width: 960px;
   margin: 0 auto;
   margin-top: 75px;
   height: 3000px;
+}
+
+.image {
+	background-image: url('posty.jpg');
+	background-size: cover;
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
 }
 
 h3 {
