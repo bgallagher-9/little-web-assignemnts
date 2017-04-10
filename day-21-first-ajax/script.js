@@ -21,6 +21,5 @@ jqprom.done(function(data) {
     swapili.appendChild(swapih2);
     swapili.appendChild(swapidivgen);
     swapili.appendChild(swapidivhair);
-    // swapili.appendChild(swapih2);
   }
 });
