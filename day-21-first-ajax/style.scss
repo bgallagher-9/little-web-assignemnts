@@ -1,10 +1,42 @@
 @import 'reset';
 
+body {
+  background-image: url(preview.png);
+  width: 100%;
+  height: auto;
+  background-position: center;
+}
+
+.title {
+  font-family: 'Varela Round';
+  font-size: 2.3em;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  position: absolute;
+}
+
 li {
   border: 1px solid black;
-  margin: 10px;
+  margin: 10px auto;
   padding: 10px;
+  background-color: rgba(179, 179, 179, .4);
+  width: 75%;
+  color: yellow;
+  font-size: 1.6em;
+  font-family: 'Londrina Outline', cursive;
 }
   h2 {
     font-weight: 700;
   }
+
+.nextDiv {
+  width: 115px;
+  font-size: 1.5em;
+  border: 1px solid yellow;
+  background-color: yellow;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+}
