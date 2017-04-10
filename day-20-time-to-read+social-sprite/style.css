@@ -72,12 +72,12 @@ ul {
   margin-right: 20px;
 }
 
- #twitter {
-  text-decoration: none;
-  float: right;
-  display: inline-block;
-  padding: 7px 3px;
-  color: black;
+#twitter {
+	text-decoration: none;
+	float: right;
+	display: inline-block;
+	padding: 7px 3px;
+	color: black;
 }
 
 #gplus {
@@ -169,46 +169,6 @@ h1 {
 
 #gplus2:hover {
 	background-position: -600px -98px;
-}
-
-#facebookI {
-  height: 98px;
-  width: 98px;
-  background-image: url('socialspritesheet.png');
-}
-
-#facebookI:hover {
-  background-position: 0 -98px;
-}
-
-#twitterI {
-  background-position: -98px 0px;
-  height: 98px;
-  width: 98px;
-  background-image: url('socialspritesheet.png');
-}
-
-#twitterI:hover {
-  background-position: -98px -98px;
-  height: 98px;
-  width: 98px;
-  background-image: url('socialspritesheet.png');
-}
-
-#youtubeI {
-  background-position: -196px 0px;
-}
-
-#youtubeI:hover {
-  background-position: -196px -98px;
-}
-
-#gplusI {
-  background-position: -196px 0px;
-}
-
-#gplusI:hover {
-  background-position: -196px -98px;
 }
 
 .container {
