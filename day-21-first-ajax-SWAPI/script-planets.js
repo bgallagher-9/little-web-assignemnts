@@ -1,14 +1,14 @@
-// console.log($);
 var jqprom = $.ajax({
-  url: 'https://swapi.co/api/people/'
-  // url: 'https://swapi.co/api/people/?page2/'
+  url: 'https://swapi.co/api/planets/'
 });
 
-var peopleList = document.querySelector('#people-list');
+var planetList = document.querySelector('#planet-list');
 var body = document.querySelector('body');
 var title = document.createElement('h1');
+var container = document.querySelector('.container');
 title.setAttribute("class", "title");
-title.textContent = 'Characters of Star Wars';
+title.textContent = 'Planets of Star Wars';
+// body.appendChild(title);
 
 
 jqprom.done(function(data) {
@@ -17,19 +17,18 @@ jqprom.done(function(data) {
   for (var i = 0; i < data.results.length; i++) {
     var swapili = document.createElement('li');
     var swapih2 = document.createElement('h2');
-    var swapidivgen = document.createElement('div');
-    var swapidivhair = document.createElement('div');
+    var swapidivorb = document.createElement('div');
+    var swapidivclimate = document.createElement('div');
 
     swapih2.textContent = data.results[i].name;
-    swapidivgen.textContent = 'Gender = ' +  data.results[i].gender;
-    swapidivhair.textContent = 'Hair Color = ' + data.results[i].hair_color;
-    peopleList.appendChild(swapili);
+    swapidivorb.textContent = 'Orbital Period = ' +  data.results[i].orbital_period;
+    swapidivclimate.textContent = 'Climate = ' + data.results[i].climate;
+    planetList.appendChild(swapili);
     swapili.appendChild(swapih2);
-    swapili.appendChild(swapidivgen);
-    swapili.appendChild(swapidivhair);
-
+    swapili.appendChild(swapidivorb);
+    swapili.appendChild(swapidivclimate);
   }
-  body.appendChild(title);
+
   var nextDiv = document.createElement('div');
   nextDiv.setAttribute("class", "nextDiv");
   var nextPeople = document.createElement('a');

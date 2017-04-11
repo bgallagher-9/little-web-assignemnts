@@ -45,39 +45,83 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
-  background-image: url(preview.png);
-  width: 100%;
-  height: auto;
-  background-position: center; }
-
-.title {
-  font-family: 'Varela Round';
-  font-size: 2.3em;
-  width: 200px;
-  margin: 0 auto;
-  text-align: center;
-  color: white;
-  position: absolute; }
-
 li {
   border: 1px solid black;
   margin: 10px auto;
   padding: 10px;
-  background-color: rgba(179, 179, 179, 0.4);
+  background-color: rgba(199, 199, 199, 0.4);
   width: 75%;
-  color: yellow;
+  color: #FADD00;
   font-size: 1.6em;
   font-family: 'Londrina Outline', cursive; }
 
 h2 {
   font-weight: 700; }
 
+body {
+  background-color: black; }
+
+.container {
+  background-image: url(preview.png);
+  width: 100%;
+  height: auto;
+  background-position: center;
+  position: relative;
+  display: block;
+  z-index: -2; }
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1; }
+
+.title {
+  font-family: 'Varela Round';
+  font-size: 3.5em;
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-weight: 700; }
+
 .nextDiv {
+  text-align: center;
+  margin: 0 auto; }
+
+.nextDiv a {
+  text-decoration: none;
+  color: black;
+  z-index: 1;
+  width: 115px;
+  font-size: 1.5em;
+  border: 1px solid yellow;
+  background-color: yellow;
+  border-radius: 10px; }
+
+.linkLeft a {
   width: 115px;
   font-size: 1.5em;
   border: 1px solid yellow;
   background-color: yellow;
   border-radius: 10px;
   text-align: center;
-  margin: 0 auto; }
+  float: left;
+  text-decoration: none;
+  color: black;
+  z-index: 10; }
+
+.linkRight a {
+  width: 115px;
+  font-size: 1.5em;
+  border: 1px solid yellow;
+  background-color: yellow;
+  border-radius: 10px;
+  text-align: center;
+  float: right;
+  text-decoration: none;
+  color: black;
+  z-index: 1; }
