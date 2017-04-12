@@ -12,8 +12,6 @@ title.textContent = 'Planets of Star Wars';
 
 
 jqprom.done(function(data) {
-
-
   for (var i = 0; i < data.results.length; i++) {
     var swapili = document.createElement('li');
     var swapih2 = document.createElement('h2');
