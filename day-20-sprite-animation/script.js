@@ -8,10 +8,10 @@ var size = 128;
 var size2 = 320;
 var row = 0;
 var column = 0;
-var intervalId = 0;
+var intervalId;
 var row2 = 0;
 var column2 = 0;
-var intervalId2 = 0;
+var intervalId2;
 
 boom.addEventListener('click', function(){
   if (intervalId === undefined) {

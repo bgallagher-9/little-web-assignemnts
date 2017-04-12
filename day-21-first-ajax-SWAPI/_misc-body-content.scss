@@ -37,15 +37,32 @@ body {
   margin: 0 auto;
 }
 
-.nextDiv a {
-  text-decoration: none;
+.links {
+  width: 50%;
+  // display: inline-block;
+  margin: 0 auto;
+  display: block;
+}
+
+#next-button {
+  float: right;
+  // margin-right: 25%;
+}
+
+#prev-button {
+  float: left;
+  // margin-left: 25%;
+}
+
+.links a {
   color: black;
-  z-index: 1;
-  width: 115px;
   font-size: 1.5em;
   border: 1px solid yellow;
   background-color: yellow;
   border-radius: 10px;
+  cursor: pointer;
+  // display: block;
+  // margin: 0 auto;
 }
 
 .linkLeft a {
@@ -58,7 +75,8 @@ body {
   float: left;
   text-decoration: none;
   color: black;
-  z-index: 10;
+  // z-index: 10;
+  clear: both;
 }
 
 .linkRight a {
@@ -71,5 +89,6 @@ body {
   float: right;
   text-decoration: none;
   color: black;
-  z-index: 1;
+  // z-index: 1;
+  // clear: both;
 }

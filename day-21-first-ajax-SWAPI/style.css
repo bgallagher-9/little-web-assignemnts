@@ -92,15 +92,24 @@ body {
   text-align: center;
   margin: 0 auto; }
 
-.nextDiv a {
-  text-decoration: none;
+.links {
+  width: 50%;
+  margin: 0 auto;
+  display: block; }
+
+#next-button {
+  float: right; }
+
+#prev-button {
+  float: left; }
+
+.links a {
   color: black;
-  z-index: 1;
-  width: 115px;
   font-size: 1.5em;
   border: 1px solid yellow;
   background-color: yellow;
-  border-radius: 10px; }
+  border-radius: 10px;
+  cursor: pointer; }
 
 .linkLeft a {
   width: 115px;
@@ -112,7 +121,7 @@ body {
   float: left;
   text-decoration: none;
   color: black;
-  z-index: 10; }
+  clear: both; }
 
 .linkRight a {
   width: 115px;
@@ -123,5 +132,4 @@ body {
   text-align: center;
   float: right;
   text-decoration: none;
-  color: black;
-  z-index: 1; }
+  color: black; }

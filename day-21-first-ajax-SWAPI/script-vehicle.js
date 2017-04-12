@@ -1,41 +1,53 @@
-var jqpromV = $.ajax({
-  url: 'https://swapi.co/api/vehicles/'
-});
-
 var vehicleList = document.querySelector('#vehicle-list');
 var body = document.querySelector('body');
 var container = document.querySelector('.container');
-var title = document.createElement('h1');
-title.setAttribute("class", "title");
-title.textContent = 'Vehicles of Star Wars';
-// body.insertBefore(title, swapili);
+var nextVehicle = document.querySelector('#next-button');
+var prevVehicle = document.querySelector('#prev-button');
 
+var page = 1;
+var totalResults;
+var pageCount;
 
-jqpromV.done(function(data) {
+function makeAjaxCall() {
+  vehicleList.innerHTML = '';
+  var jqpromV = $.ajax({
+    url: 'https://swapi.co/api/vehicles/' + '?page=' + page
+  });
+  jqpromV.done(function(data) {
+    totalResults = data.count;
+    pageCount = Math.ceil(totalResults/10);
+    for (var i = 0; i < data.results.length; i++) {
+      var swapili = document.createElement('li');
+      var swapih2 = document.createElement('h2');
+      var swapidivmodel = document.createElement('div');
+      var swapidivmanu = document.createElement('div');
 
-
-  for (var i = 0; i < data.results.length; i++) {
-    var swapili = document.createElement('li');
-    var swapih2 = document.createElement('h2');
-    var swapidivmodel = document.createElement('div');
-    var swapidivmanu = document.createElement('div');
-
-    swapih2.textContent = data.results[i].name;
-    swapidivmodel.textContent = 'Model = ' +  data.results[i].model;
-    swapidivmanu.textContent = 'Manufacturer = ' + data.results[i].manufacturer;
-    vehicleList.appendChild(swapili);
-    swapili.appendChild(swapih2);
-    swapili.appendChild(swapidivmodel);
-    swapili.appendChild(swapidivmanu);
-  }
-
-  var nextDiv = document.createElement('div');
-  nextDiv.setAttribute("class", "nextDiv");
-  var nextVehicle = document.createElement('a');
-
-  nextVehicle.textContent = 'Next Page';
-  nextVehicle.href = data.next;
-  body.appendChild(nextDiv);
-  nextDiv.appendChild(nextVehicle);
-  // console.log(data.next);
+      swapih2.textContent = data.results[i].name;
+      swapidivmodel.textContent = 'Model = ' +  data.results[i].model;
+      swapidivmanu.textContent = 'Manufacturer = ' + data.results[i].manufacturer;
+      vehicleList.appendChild(swapili);
+      swapili.appendChild(swapih2);
+      swapili.appendChild(swapidivmodel);
+      swapili.appendChild(swapidivmanu);
+    }
+    if (page === 1) {
+        prevVehicle.style.display = 'none';
+    } else {
+        prevVehicle.style.display = 'inline';
+    }
+    if (page >= pageCount) {
+        nextVehicle.style.display = 'none';
+    } else {
+        nextVehicle.style.display = 'inline';
+    }
+  })
+};
+makeAjaxCall();
+nextVehicle.addEventListener('click', function() {
+  page += 1;
+  makeAjaxCall();
+});
+prevVehicle.addEventListener('click', function() {
+  page -= 1;
+  makeAjaxCall();
 });
