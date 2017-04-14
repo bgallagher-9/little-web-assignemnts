@@ -51,7 +51,7 @@ firmquery.addEventListener('keyup', function() {
 })
 $.ajax({
         url: '/api/viodata'
-    })
+})
 .done(function(data) {
     ajaxdata = data;
     putOnPage(ajaxdata.values);

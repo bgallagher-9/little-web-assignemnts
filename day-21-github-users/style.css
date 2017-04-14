@@ -45,10 +45,64 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+  font-family: Helvetica;
+}
+
+#search-query {
+  margin: 20px auto;
+  width: 70%;
+  display: block;
+}
+
 li {
   border: 1px solid black;
-  margin: 10px;
-  padding: 10px; }
+  margin: 10px auto;
+  padding: 10px;
+  width: 70%;
+}
+
+li a {
+  display: block;
+}
 
 h2 {
-  font-weight: 700; }
+  font-weight: 700;
+}
+
+.button-container {
+  display: inline-block;
+  /*width: 20%;*/
+  /*margin-bottom: 50px;*/
+  padding-left: 140px
+}
+
+.links {
+  display: inline-block;
+  color: red;
+  padding: 5px;
+  /*width: 20%;
+  margin: 0 auto;
+  border: 1px solid red;*/
+}
+
+/*#page-button {
+  /*float: right;*/
+  /*margin-right: 25%;
+}*/
+
+.greyprev {
+  color: lightgrey;
+}
+
+ .integer {
+  height: 20px;
+  width: 25px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  display: inline-block;
+}

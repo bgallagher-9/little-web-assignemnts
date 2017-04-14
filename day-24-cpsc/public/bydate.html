@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>By Date</title>
+  </head>
+  <body>
+
+    <ol id="dates">
+    </ol>
+
+    <table>
+      <tbody>
+
+      </tbody>
+    </table>
+
+
+    <!-- mustache.js scripting - acting like normal html -->
+    <script type="text/html" id="row-template">
+      <tr class="row">
+        <td>{{date}}</td>
+        <td>{{product}}</td>
+        <td>{{violation}}</td>
+        <td>{{firm}}</td>
+      </tr>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="bydate.js"></script>
+  </body>
+</html>
