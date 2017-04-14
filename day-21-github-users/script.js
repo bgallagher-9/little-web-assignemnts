@@ -36,9 +36,10 @@ function makeAjaxCall() {
     if (page !== 1) {
         prevButton.style.display = 'inline';
         int.style.display = 'inline-block';
+        prevButton.style.color = 'red';
     }
-    else {
-        // prevButton.style.display = 'inline';
+    else if (page === 1) {
+        prevButton.style.color = 'lightgrey';
 
     }
     if (page >= pageCount) {
@@ -57,29 +58,21 @@ query.addEventListener('keyup', function(evt) {
     // prevButton.callList.remove('#prev-button');
 });
 nextButton.addEventListener('click', function() {
-    // if (startNum > 1) {
-      startNum++;
-      int.textContent = startNum;
-      // prevButton.classList.remove('greyprev');
-    // }
-    // else
-    // if (startNum <= 1) {
-      // prevButton.classList.add('greyprev');
-    // }
+    startNum++;
+    int.textContent = startNum;
     page += 1;
     makeAjaxCall();
-    // prevButton.callList.remove('#prev-button');
 });
 prevButton.addEventListener('click', function() {
-  if (startNum <= 2) {
+  if (startNum <= 1) {
     startNum--;
-    // int.textContent = 1;
-    prevButton.classList.add('greyprev');
+    int.textContent = 1;
+    // prevButton.classList.add('greyprev');
   }
-  else if (startNum > 2) {
+  else if (startNum > 1) {
     startNum--;
     int.textContent = startNum;
-    prevButton.classList.remove('greyprev');
+    // prevButton.classList.remove('greyprev');
   }
     page -= 1;
     makeAjaxCall();

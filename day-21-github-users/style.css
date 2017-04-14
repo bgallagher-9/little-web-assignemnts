@@ -81,16 +81,15 @@ h2 {
 
 .links {
   display: inline-block;
-  color: red;
   padding: 5px;
-  /*width: 20%;
-  margin: 0 auto;
-  border: 1px solid red;*/
 }
 
-/*#page-button {
-  /*float: right;*/
-  /*margin-right: 25%;
+#page-button {
+  color: red;
+}
+
+/*#prev-button {
+  color: red;
 }*/
 
 .greyprev {
