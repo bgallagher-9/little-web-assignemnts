@@ -52,3 +52,12 @@ h1 {
   font-size: 2em;
   font-weight: 500;
 }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+thead {
+  background-color: grey;
+}
