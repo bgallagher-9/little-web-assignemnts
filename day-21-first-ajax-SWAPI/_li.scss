@@ -1,4 +1,4 @@
-li {
+#people-list li  {
   border: 1px solid black;
   margin: 10px auto;
   padding: 10px;
@@ -8,6 +8,29 @@ li {
   font-size: 1.6em;
   font-family: 'Londrina Outline', cursive;
 }
+
+#planet-list li  {
+  border: 1px solid black;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: rgba(199, 199, 199, .4);
+  width: 75%;
+  color: #FADD00;
+  font-size: 1.6em;
+  font-family: 'Londrina Outline', cursive;
+}
+
+#vehicle-list li  {
+  border: 1px solid black;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: rgba(199, 199, 199, .4);
+  width: 75%;
+  color: #FADD00;
+  font-size: 1.6em;
+  font-family: 'Londrina Outline', cursive;
+}
+
 
 h2 {
   font-weight: 700;

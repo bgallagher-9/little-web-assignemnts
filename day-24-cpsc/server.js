@@ -2,8 +2,10 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 
+
 app.use(express.static('public'));
 
+app.set('view engine', 'ejs');
 app.get('/api/viodata', function(reg, res){
 
   fs.readFile('violation-data.csv', 'utf-8', function(err, data) {
@@ -28,6 +30,10 @@ app.get('/api/viodata', function(reg, res){
     });
     // console.log('got it', lines);
   });
+});
+
+app.get('/about', function(req, res) {
+  res.render('pages/about', { greeting: 'Hello, now go away' })
 });
 
 
