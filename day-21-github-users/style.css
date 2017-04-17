@@ -64,10 +64,6 @@ li {
   width: 70%;
 }
 
-li a {
-  display: block;
-}
-
 h2 {
   font-weight: 700;
 }
@@ -88,10 +84,6 @@ h2 {
   color: red;
 }
 
-/*#prev-button {
-  color: red;
-}*/
-
 .greyprev {
   color: lightgrey;
 }
@@ -104,4 +96,8 @@ h2 {
   text-align: center;
   padding-top: 5px;
   display: inline-block;
+}
+
+.row td {
+  border: solid 1px red;
 }

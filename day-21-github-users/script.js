@@ -3,6 +3,7 @@ var query = document.querySelector('#search-query');
 var nextButton = document.querySelector('#page-button');
 var prevButton = document.querySelector('#prev-button');
 var int = document.querySelector('.integer');
+var template = document.querySelector('#row-template').innerHTML;
 
 var page = 1;
 var totalResults;
@@ -18,15 +19,13 @@ function makeAjaxCall() {
       totalResults = data.total_count;
       pageCount = Math.ceil(totalResults / 30);
 
-      var template = document.querySelector('#row-template').innerHTML;
-      var totalHtml = '';
-      for (var i = 0; i < data.length; i++) {
-        var html = Mustache.render(template, data[i].items);
-        // login: data.items[i].login,
-        // repos_url: data.items[i].repos_url
-      }
-
-
+      var html = '';
+      for (var i = 0; i < data.items.length; i++) {
+        html += Mustache.render(template, {
+          login: data.items[i].login,
+          repos_url: data.items[i].repos_url});
+      };
+      gituserList.innerHTML = html;
       // for (var i = 0; i < data.items.length; i++) {
       //
       //     var gitli = document.createElement('li');
@@ -43,7 +42,7 @@ function makeAjaxCall() {
       //     gitdivrepo.href = data.items[i].repos_url;
       //     gitli.appendChild(gitdivrepo);
     // }
-    totalHtml += html;
+
     if (page !== 1) {
       prevButton.style.display = 'inline';
       int.style.display = 'inline-block';
@@ -58,7 +57,7 @@ function makeAjaxCall() {
       nextButton.style.display = 'inline';
     }
   });
-}
+};
 query.addEventListener('keyup', function(evt) {
   if (evt.keyCode !== 13) {
     return;

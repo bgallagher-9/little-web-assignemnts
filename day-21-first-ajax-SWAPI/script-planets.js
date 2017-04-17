@@ -28,8 +28,6 @@ function makeAjaxCall() {
       };
       planetList.innerHTML = html;
 
-
-
       // for (var i = 0; i < data.results.length; i++) {
       //     var swapili = document.createElement('li');
       //     var swapih2 = document.createElement('h2');
