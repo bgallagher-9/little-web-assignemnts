@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chuck Norris Jokes</title>
+    <link style="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="inputz-div" >
+      <input class="first-input" placeholder="First Name" />
+      <input class="last-input" placeholder="Last Name" />
+      <div class="click-for-joke">Click for Joke</div>
+    </div>
+
+    <div id="chuck-joke"></div>
+
+    <script type="text/html" id="joke-template">
+      <div>{{joke}}</div>
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
