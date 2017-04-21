@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Multi Step Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <div class="names" id="names">
+        <p id="name-title">Please Enter Your First and Last Name</p>
+        <input class="name-input" id="first-name" type="text" placeholder="First" required/>
+        <input class="name-input" id="last-name" type="text" placeholder="Last" required/>
+        <button class="next-button" id="next-button">Next</button>
+      </div>
+
+      <div class="gender" id="gender" style="display: none">
+        <p id="gender-title">Please Choose Which Best Applies</p>
+        <input type="radio" id="female" /><label for="female">Female</label><br />
+        <input type="radio" id="male" /><label for="male">Male</label><br />
+        <input type="radio" id="bothgen" /><label for="bothgen">Both</label><br />
+        <input type="radio" id="dunnogen" /><label for="dunnogen">Don't Know</label><br />
+        <input type="radio" id="nagen" /><label for="nagen">N/A</label><br />
+        <button class="previous-button button" id="previous-gender-button">Previous</button>
+        <button class="next-button" id="next-gender-button">Next</button>
+      </div>
+
+      <div class="select-menu" id="select-menu" style="display: none">
+        <p id="select-title">Please Choose Your Favorite Color</p>
+        <select>
+          <option>Red</option>
+          <option>Black</option>
+          <option>Green</option>
+          <option>Yellow</option>
+          <option>No!</option>
+        </select><br />
+        <button class="previous-button button" id="previous-select-button">Previous</button>
+        <button class="next-button" id="select-menu-button">Next</button>
+      </div>
+
+      <div class="textarea" id="textarea" style="display: none">
+        <p id="text-title">Please tell us anything else that is not true about you that we should know.</p>
+        <textarea rows="3" placeholder="Not True"></textarea>
+        <button class="previous-button button" id="previous-text-button">Previous</button>
+        <button class="submit-button" id="submit-button">Submit</button>
+      </div>
+    </form>
+
+    <!-- <button class="previous-button button" id="previous-button" style="hidden">Previous</button> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

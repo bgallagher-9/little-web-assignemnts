@@ -1,0 +1,16 @@
+.danger-zone {
+  height: 400px;
+  width: 500px;
+  border: 1px solid red;
+  margin: 0 auto;
+  /*position: relative;*/
+}
+
+.firework {
+  background-image: url('fireworks.jpg');
+  height: 128px;
+  width: 128px;
+  position: absolute;
+  /*zoom: 250%;*/
+  /*border: 1px solid red;*/
+}

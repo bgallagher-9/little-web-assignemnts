@@ -28,10 +28,6 @@ var strs = ['hello', 'crazy', 'peas', 'terminal']
 // var shuffled = arr.shuffle();
 // console.log(shuffled);
 
-
-
-
-
 function Animal(name) {
   this.name = name;
 }
@@ -47,7 +43,6 @@ Animal.prototype.breath = function() {
 function Dog(name) {
   this.name = name;
 
-
 Cat.prototype = new Animal();
 
 Cat.prototype.makeNoise = function() {
@@ -59,3 +54,30 @@ var fido = new Animal('Fido');
 fido.makeNoise();
 fido.breath();
   //console.log(fido.makeNoise);
+
+  // This code uses a function called head and a function called tail.
+  // Unfortunately, those functions aren't built-in to arrays in JS :(
+  // Fortunately, you can add them to the prototype! Do it!
+var nums = [1, 52, 16, 9, 100, 4];
+
+var head = nums.head();
+console.log(head); //This should be 1
+
+var tail = nums.tail();
+console.log(tail); //This should be [52, 16, 9, 100, 4]
+
+function Coin(side) {
+  this.side = side;
+}
+//Coin
+Array.prototype.head = function() {
+  return nums[0];
+  console.log(nums[0]);
+};
+//Coin
+Array.prototype.tails = function() {
+  return nums.slice([1], [5])
+  console.log(nums.slice([1], [5]));
+};
+var head = new Coin('head');
+var tail = new Coin('tail');
