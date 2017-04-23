@@ -18,20 +18,23 @@ $.ajax({
     html += Mustache.render(thumbnailItems, {
       index: i,
       thumbnail: data.pictures[i].thumbnail,
-      // fullsize: data.pictures[i].fullsize,
-      // description: data.pictures[i].description
     });
   };
   thumbnails.innerHTML = html;
-  // console.log(thumbnails);
 });
 thumbnails.addEventListener('click', function(evtname) {
   selectImage.style.display = 'none';
+  console.log(evtname);
+  var tNImagesBorder = document.querySelector('.tnimages-border');
+
+  if (tNImagesBorder !== null) {
+    tNImagesBorder.classList.remove('tnimages-border');
+  }
+  if (evtname.target.tagName === 'IMG') {
+    evtname.target.classList.add('tnimages-border')
+  }
   var index = evtname.target.getAttribute('data-index');
-  console.log(index);
   var picThing = ajaxData.pictures[index];
-  console.log(picThing);
   var html = Mustache.render(bigImageItems, picThing);
-  // console.log(html);
   bigImage.innerHTML = html;
 });

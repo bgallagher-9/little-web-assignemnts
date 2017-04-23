@@ -47,17 +47,39 @@ table {
 	border-spacing: 0;
 }
 
+#big-image {
+	margin: 40px auto 100px auto;
+	width: 600px;
+	height: 400px;
+}
+
 #big-image img {
 	width: 400px;
 	height: 400px;
+	margin: 0 100px 0 100px;
+}
+
+#big-image p {
+	text-align: center;
+	font-size: 1.5em;
 }
 
 #thumbnails {
 	width: 70%;
-	/*float: left;*/
-	margin: 0 auto;
+
+	margin: 50px 20%;
 }
 
 #thumbnails li {
 	float: left;
+	padding: 0 15px 0 15px;
+}
+
+#select-image {
+	font-size: 3em;
+	text-align: center;
+}
+
+.tnimages-border {
+	border: 3px solid black;
 }
