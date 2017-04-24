@@ -19,7 +19,11 @@ sendButton.addEventListener('click', function(evt) {
   if (firstName.value === '' || lastName.value === '') {
     evt.preventDefault();
     missingName.textContent = "Please fill out the name fields."
-  };
+  }
+  else {
+    firstName.style.display = 'none';
+    lastName.style.display = 'none';
+  }
 
 });
 // missingName.textContent.display = 'hidden';

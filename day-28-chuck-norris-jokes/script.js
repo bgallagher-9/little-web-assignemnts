@@ -13,73 +13,38 @@
 // var inputzDiv = new View('.inputz-div');
 var inputzDiv = document.querySelector('.inputz-div');
 // var inputzField = new View('.inputz-field');
-var inputzField = document.querySelector('.inputz-field');
+// var inputzField = document.querySelector('.inputz-field');
 //var clickForJoke = new View('.click-for-joke');
 var clickForJoke = document.querySelector('.click-for-joke');
 // var chuckJoke = new View('#chuck-joke');
 var chuckJoke = document.querySelector('#chuck-joke');
 // var jokeTemplate = new View('#joke-template').innerHTML;
-
-
+var names = document.querySelector('.first-input').innerHTML;
 //var firstName = new View('.first-input');//input
-var name = document.querySelector('.first-input');
 // var lastName = document.querySelector('.last-input');
 //var lastName = new View('.last-input');//input
 // jokeTemplate.innerHTML = '';
+var ajaxData;
+console.log(name.value);
 function randJokeOnPage() {
   $.ajax({
       url: 'http://api.icndb.com/jokes/random'
-      //?firstName=' + firstName.value + '&lastName=' + lastName.value
   })
   .done(function(data) {
     ajaxData = data;
-    if (name.input === '') {
-      chuckJoke.text = data.value.joke;
-      //  html = html.replace('Chuck Norris', input.value);
-      // console.log(html);
+    if (names.value === undefined) {
+      chuckJoke.textContent = ajaxData.value.joke;
     }
-    else if (name.value !== ''){
-
-      chuckJoke.textContent = data.value.joke.replace('Chuck Norris', name.value);
-      console.log(name.value);
+    else if (names.value === '') {
+      chuckJoke.textContent = ajaxData.value.joke.replace('Chuck Norris', names.input);
+      console.log('1',names.input);
+      console.log('2',names.value);
+      console.log('3',data.value.joke);
     }
-
-    // console.log(chuckJoke);
   });
-}
-
-// function nameJokeOnPage() {
-//   $.ajax({
-//       url: 'http://api.icndb.com/jokes/random?firstName=' + firstName.value + '&lastName=' + lastName.value
-//   })
-//   .done(function(data) {
-//     ajaxData = data;
-//     chuckJoke.textContent = data.value.joke;
-//     // console.log(firstName.input);
-//   });
-// }
-
+};
 clickForJoke.addEventListener('click', function() {
-// var html =
-  randJokeOnPage();
-  console.log('click');
-// console.log(html);
-  // if (name.value !== '') {
-  //    html = html.replace('Chuck Norris', input.value);
-  //   // console.log(html);
-  // }
-  // chuckJoke.textContent = '';
-  // else {
-  //   randJokeOnPage();
-  // }
-  // console.log('click', randJokeOnPage());
-});
 
-// clickForJoke.addEventListener('click', function() {
-//   if (firstName !== undefined && lastName !== undefined) {
-//     randJokeOnPage();
-//   }
-//   // chuckJoke.textContent = '';
-//
-//   // console.log('click', randJokeOnPage());
-// });
+  randJokeOnPage();
+  // console.log(ajaxData);
+});

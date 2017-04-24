@@ -6,21 +6,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form>
+    <form action="http://postb.in/8jWuZCRe" method='post'>
       <div class="names" id="names">
         <p id="name-title">Please Enter Your First and Last Name</p>
-        <input class="name-input" id="first-name" type="text" placeholder="First" required/>
-        <input class="name-input" id="last-name" type="text" placeholder="Last" required/>
+        <input class="name-input" id="first-name" type="text" placeholder="First" />
+        <input class="name-input" id="last-name" type="text" placeholder="Last" />
+        <p id="missing-name"></p>
         <button class="next-button" id="next-button">Next</button>
       </div>
 
       <div class="gender" id="gender" style="display: none">
         <p id="gender-title">Please Choose Which Best Applies</p>
-        <input type="radio" id="female" /><label for="female">Female</label><br />
-        <input type="radio" id="male" /><label for="male">Male</label><br />
-        <input type="radio" id="bothgen" /><label for="bothgen">Both</label><br />
-        <input type="radio" id="dunnogen" /><label for="dunnogen">Don't Know</label><br />
-        <input type="radio" id="nagen" /><label for="nagen">N/A</label><br />
+        <input type="radio" name="choice-of-gender" id="female" /><label for="female">Female</label><br />
+        <input type="radio" name="choice-of-gender" id="male" /><label for="male">Male</label><br />
+        <input type="radio" name="choice-of-gender" id="bothgen" /><label for="bothgen">Both</label><br />
+        <input type="radio" name="choice-of-gender" id="dunnogen" /><label for="dunnogen">Don't Know</label><br />
+        <input type="radio" name="choice-of-gender" id="nagen" /><label for="nagen">N/A</label><br />
         <button class="previous-button button" id="previous-gender-button">Previous</button>
         <button class="next-button" id="next-gender-button">Next</button>
       </div>
@@ -40,14 +41,11 @@
 
       <div class="textarea" id="textarea" style="display: none">
         <p id="text-title">Please tell us anything else that is not true about you that we should know.</p>
-        <textarea rows="3" placeholder="Not True"></textarea>
+        <textarea rows="3" placeholder="Not True"></textarea><br />
         <button class="previous-button button" id="previous-text-button">Previous</button>
         <button class="submit-button" id="submit-button">Submit</button>
       </div>
     </form>
-
-    <!-- <button class="previous-button button" id="previous-button" style="hidden">Previous</button> -->
-
     <script src="script.js"></script>
   </body>
 </html>
