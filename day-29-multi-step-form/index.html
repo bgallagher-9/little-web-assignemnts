@@ -17,23 +17,23 @@
 
       <div class="gender" id="gender" style="display: none">
         <p id="gender-title">Please Choose Which Best Applies</p>
-        <input type="radio" name="choice-of-gender" id="female" /><label for="female">Female</label><br />
-        <input type="radio" name="choice-of-gender" id="male" /><label for="male">Male</label><br />
-        <input type="radio" name="choice-of-gender" id="bothgen" /><label for="bothgen">Both</label><br />
-        <input type="radio" name="choice-of-gender" id="dunnogen" /><label for="dunnogen">Don't Know</label><br />
-        <input type="radio" name="choice-of-gender" id="nagen" /><label for="nagen">N/A</label><br />
+        <input type="radio" class="choice-of-gender" name="choice-of-gender" id="female" /><label for="female">Female</label><br />
+        <input type="radio" class="choice-of-gender" name="choice-of-gender" id="male" /><label for="male">Male</label><br />
+        <input type="radio" class="choice-of-gender" name="choice-of-gender" id="bothgen" /><label for="bothgen">Both</label><br />
+        <input type="radio" class="choice-of-gender" name="choice-of-gender" id="dunnogen" /><label for="dunnogen">Don't Know</label><br />
+        <input type="radio" class="choice-of-gender" name="choice-of-gender" id="nagen" /><label for="nagen">N/A</label><br />
         <button class="previous-button button" id="previous-gender-button">Previous</button>
         <button class="next-button" id="next-gender-button">Next</button>
       </div>
 
       <div class="select-menu" id="select-menu" style="display: none">
         <p id="select-title">Please Choose Your Favorite Color</p>
-        <select>
-          <option>Red</option>
-          <option>Black</option>
-          <option>Green</option>
-          <option>Yellow</option>
-          <option>No!</option>
+        <select name="colors">
+          <option value="red" id="red">Red</option>
+          <option value="black" id="black">Black</option>
+          <option value="green" id="green">Green</option>
+          <option value="yellow" id="yellow">Yellow</option>
+          <option value="no" id="no">No!</option>
         </select><br />
         <button class="previous-button button" id="previous-select-button">Previous</button>
         <button class="next-button" id="select-menu-button">Next</button>

@@ -1,10 +1,13 @@
 var dangerZone = document.querySelector('#danger-zone');
+// var audio = new Audio('firework.aif');
 
+// console.log(fwAudio);
 var size = 128;
 // var row = 0;
 // var column = 0;
 var intervalId;
 var frameColumn = 0;
+
 
 dangerZone.addEventListener('click', function(evt) {
   var ypos = evt.clientY-64;
@@ -12,7 +15,11 @@ dangerZone.addEventListener('click', function(evt) {
   var explosion = new Explosion(xpos, ypos);
   dangerZone.appendChild(explosion.div);
   explosion.start();
-
+  function play(){
+       var audio = document.getElementById("fireworkaudio");
+       audio.play();
+                 }
+  play();
   // console.log(xpos, ypos);
   // explode(xpos, ypos);
   // explosion1();
@@ -95,7 +102,7 @@ Explosion.prototype.start = function() {
     else {
       self.column += 1;
     };
-    console.log('row', self.row, 'column', self.column)
+    // console.log('row', self.row, 'column', self.column)
 
 
 
