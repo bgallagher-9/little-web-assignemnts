@@ -19,27 +19,27 @@ var clickForJoke = document.querySelector('.click-for-joke');
 // var chuckJoke = new View('#chuck-joke');
 var chuckJoke = document.querySelector('#chuck-joke');
 // var jokeTemplate = new View('#joke-template').innerHTML;
-var names = document.querySelector('.first-input').innerHTML;
+var names = document.querySelector('.first-input');
 //var firstName = new View('.first-input');//input
 // var lastName = document.querySelector('.last-input');
 //var lastName = new View('.last-input');//input
 // jokeTemplate.innerHTML = '';
 var ajaxData;
-console.log(name.value);
+// console.log(name.value);
 function randJokeOnPage() {
   $.ajax({
       url: 'http://api.icndb.com/jokes/random'
   })
   .done(function(data) {
     ajaxData = data;
-    if (names.value === undefined) {
-      chuckJoke.textContent = ajaxData.value.joke;
-    }
-    else if (names.value === '') {
-      chuckJoke.textContent = ajaxData.value.joke.replace('Chuck Norris', names.input);
+    if (names.value !== '') {
+      chuckJoke.textContent = ajaxData.value.joke.replace('Chuck Norris', names.value);
       console.log('1',names.input);
       console.log('2',names.value);
       console.log('3',data.value.joke);
+    }
+    else {
+      chuckJoke.textContent = ajaxData.value.joke;
     }
   });
 };
