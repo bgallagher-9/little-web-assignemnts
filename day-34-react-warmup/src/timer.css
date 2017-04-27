@@ -1,0 +1,9 @@
+.timer {
+  /*position: absolute;*/
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  line-height: 100px;
+  border: 1px solid red;
+  /*display: inline-flex;*/
+}
