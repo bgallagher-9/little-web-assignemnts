@@ -8,7 +8,7 @@ var nextSelect = document.querySelector('#select-menu-button');
 var nextText = document.querySelector('#submit-button');
 var prevGender = document.querySelector('#previous-gender-button');
 var prevSelect = document.querySelector('#previous-select-button');
-var prevText = document.querySelector('#previous-text-button');
+
 var firstName = document.querySelector('#first-name');
 var lastName = document.querySelector('#last-name');
 var missingName = document.querySelector('#missing-name');
@@ -16,7 +16,6 @@ var select = document.querySelector('select');
 // var option = document.querySelector('option');
 var gender = document.querySelector('#gender').getElementsByTagName('INPUT');
 var genderChecked = localStorage.getItem('gender');
-var textFill = document.querySelector('#textidarea').getElementsByTagName('TEXTAREA');
 
 
 
@@ -98,18 +97,34 @@ nextSelect.addEventListener('click', function(evt) {
   var colors = document.getElementsByName('colors')[0]
   var value = colors.options[colors.selectedIndex].value;
   localStorage.setItem('color', value);
+  // localStorage.getItem('text');
 });
-
 
 //needs more work*********
 
 // var textArea = document.querySelector('textarea');
+var prevText = document.querySelector('#previous-text-button');
+var textFill = document.querySelectorAll('#textidarea textarea');
+var textTest = document.querySelectorAll('textarea');
+
+
+// console.log(textTest);
+
 console.log(textFill);
-textFill = localStorage.getItem('text');
-textDiv.addEventListener('keyup', function(evt) {
-  // localStorage.setItem('text', textFill.textContent);
-  console.log(textDiv.textarea.value);
+// var zurb = localStorage.getItem('text');
+var textStuff;
+// localStorage.getItem('text');
+textFill[0].addEventListener('keyup', function(evt) {
+
+  localStorage.setItem('text', textFill[0].value);
+  textStuff = textFill[0].value;
+  // textFill[0] = zurb;
+  // console.log('in',zurb);
 });
+textStuff = localStorage.getItem('text');
+
+console.log(textFill);
+console.log(localStorage.getItem('text'));
 prevText.addEventListener('click', function(evt) {
   evt.preventDefault();
   textDiv.style.display = 'none';
