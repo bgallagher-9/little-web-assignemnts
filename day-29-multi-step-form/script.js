@@ -97,34 +97,24 @@ nextSelect.addEventListener('click', function(evt) {
   var colors = document.getElementsByName('colors')[0]
   var value = colors.options[colors.selectedIndex].value;
   localStorage.setItem('color', value);
+  // if (textFill[0].value === '') {
+  //   localStorage.getItem('text');
+  //   // textFill[0].value
+  //   console.log(textFill[0].value);
+  //   console.log(localStorage.getItem('text'));
+  // }
   // localStorage.getItem('text');
 });
 
 //needs more work*********
 
-// var textArea = document.querySelector('textarea');
 var prevText = document.querySelector('#previous-text-button');
 var textFill = document.querySelectorAll('#textidarea textarea');
-var textTest = document.querySelectorAll('textarea');
-
-
-// console.log(textTest);
-
-console.log(textFill);
-// var zurb = localStorage.getItem('text');
-var textStuff;
-// localStorage.getItem('text');
+// var textStuff;
+textFill[0].value= localStorage.getItem('text');
 textFill[0].addEventListener('keyup', function(evt) {
-
   localStorage.setItem('text', textFill[0].value);
-  textStuff = textFill[0].value;
-  // textFill[0] = zurb;
-  // console.log('in',zurb);
 });
-textStuff = localStorage.getItem('text');
-
-console.log(textFill);
-console.log(localStorage.getItem('text'));
 prevText.addEventListener('click', function(evt) {
   evt.preventDefault();
   textDiv.style.display = 'none';
