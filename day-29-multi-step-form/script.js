@@ -8,15 +8,14 @@ var nextSelect = document.querySelector('#select-menu-button');
 var nextText = document.querySelector('#submit-button');
 var prevGender = document.querySelector('#previous-gender-button');
 var prevSelect = document.querySelector('#previous-select-button');
-
+var prevText = document.querySelector('#previous-text-button');
+var textFill = document.querySelectorAll('#textidarea textarea');
 var firstName = document.querySelector('#first-name');
 var lastName = document.querySelector('#last-name');
 var missingName = document.querySelector('#missing-name');
 var select = document.querySelector('select');
-// var option = document.querySelector('option');
 var gender = document.querySelector('#gender').getElementsByTagName('INPUT');
 var genderChecked = localStorage.getItem('gender');
-
 
 
 firstName.value = localStorage.getItem('nameFirst');
@@ -97,20 +96,7 @@ nextSelect.addEventListener('click', function(evt) {
   var colors = document.getElementsByName('colors')[0]
   var value = colors.options[colors.selectedIndex].value;
   localStorage.setItem('color', value);
-  // if (textFill[0].value === '') {
-  //   localStorage.getItem('text');
-  //   // textFill[0].value
-  //   console.log(textFill[0].value);
-  //   console.log(localStorage.getItem('text'));
-  // }
-  // localStorage.getItem('text');
 });
-
-//needs more work*********
-
-var prevText = document.querySelector('#previous-text-button');
-var textFill = document.querySelectorAll('#textidarea textarea');
-// var textStuff;
 textFill[0].value= localStorage.getItem('text');
 textFill[0].addEventListener('keyup', function(evt) {
   localStorage.setItem('text', textFill[0].value);
@@ -119,4 +105,13 @@ prevText.addEventListener('click', function(evt) {
   evt.preventDefault();
   textDiv.style.display = 'none';
   selectDiv.style.display = 'block';
+});
+
+
+
+// document.addEventListener('DOMContentLoaded',function(evt) {
+//   console.log(evt);
+// });
+document.addEventListener('pageshow',function(evt) {
+  console.log(evt.pageshow)
 });
