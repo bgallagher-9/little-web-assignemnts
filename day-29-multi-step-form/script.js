@@ -16,6 +16,7 @@ var missingName = document.querySelector('#missing-name');
 var select = document.querySelector('select');
 var gender = document.querySelector('#gender').getElementsByTagName('INPUT');
 var genderChecked = localStorage.getItem('gender');
+var submit = document.querySelector('#submit-button');
 
 
 firstName.value = localStorage.getItem('nameFirst');
@@ -105,13 +106,4 @@ prevText.addEventListener('click', function(evt) {
   evt.preventDefault();
   textDiv.style.display = 'none';
   selectDiv.style.display = 'block';
-});
-
-
-
-// document.addEventListener('DOMContentLoaded',function(evt) {
-//   console.log(evt);
-// });
-document.addEventListener('pageshow',function(evt) {
-  console.log(evt.pageshow)
-});
+  });
