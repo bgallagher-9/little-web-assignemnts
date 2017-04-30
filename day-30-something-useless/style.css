@@ -1,38 +1,16 @@
 .danger-zone {
-  height: 800px;
+  height: 1800px;
   width: 100%;
-  /*border: 66px solid black;*/
-  /*margin-top: 128px;*/
-  /*margin-left: auto;*/
-  /*margin-right: auto;*/
+  /*border: 2px solid grey;*/
   background-color: black;
-  /*padding-top: 65px;*/
-  /*position: relative;*/
-}
+  }
 
 .firework {
   background-image: url('fireworks.jpg');
   height: 128px;
   width: 128px;
   position: absolute;
-  /*zoom: 250%;*/
-  /*border: 1px solid red;*/
 }
-
-/*.bground {
-  height: 530px;
-  width: 630px;
-  background-color: red;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 65px;
-  margin: 0 auto;
-  margin-top: 65px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-}*/
-
 body {
   background-color: black;
 }

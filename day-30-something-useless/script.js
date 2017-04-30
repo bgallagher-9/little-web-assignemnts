@@ -10,8 +10,8 @@ var frameColumn = 0;
 
 
 dangerZone.addEventListener('click', function(evt) {
-  var ypos = evt.clientY-64;
-  var xpos = evt.clientX-64;
+  var ypos = evt.pageY-64;
+  var xpos = evt.pageX-64;
   var explosion = new Explosion(xpos, ypos);
   dangerZone.appendChild(explosion.div);
   explosion.start();
@@ -72,12 +72,9 @@ function Explosion(xpos, ypos) {
   this.row = 0;
   this.column = 0;
   console.log('px ' + xpos, 'py' + ypos);
-  // this.backgroundX = 0;
-  // this.backgroundY = 0;
-  if (this === 'DIV') {
+    if (this === 'DIV') {
     this.div.remove();
   }
-  console.log(this);
 }
 
 Explosion.prototype.start = function() {
