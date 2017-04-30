@@ -71,8 +71,13 @@ function Explosion(xpos, ypos) {
   this.div.style.top = ypos + 'px';
   this.row = 0;
   this.column = 0;
+  console.log('px ' + xpos, 'py' + ypos);
   // this.backgroundX = 0;
   // this.backgroundY = 0;
+  if (this === 'DIV') {
+    this.div.remove();
+  }
+  console.log(this);
 }
 
 Explosion.prototype.start = function() {
@@ -81,7 +86,7 @@ Explosion.prototype.start = function() {
   self.intevalID = setInterval(function() {
     self.positionX = self.column * size * -1;
     self.positionY = self.row * size * -1;
-    // console.log('px ' + positionX, 'py ' + positionY)
+    // console.log('px ' + self.positionX, 'py ' + self.positionY)
     self.div.style.backgroundPositionX = self.positionX + 'px';
     self.div.style.backgroundPositionY = self.positionY + 'px';
     // console.log(self.positionX);
@@ -121,7 +126,7 @@ Explosion.prototype.start = function() {
     //
     //   self.frameColumn = 0;
     //};
-  }, 25);
+  }, 28);
 };
 
 // setTimeout(function() {
