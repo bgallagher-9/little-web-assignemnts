@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import GithubRepo from './githubrepo.js';
+import GithubRepo from './githubrepo.js';
 import Clock from './clock.js';
 import SuperClock from './superclock.js';
 
@@ -44,8 +44,8 @@ class Toggle extends React.Component {
 }
 ReactDOM.render(
   //can return only one component here!!!!
-  <Toggle />,
-  // <GithubRepo />,
+  // <Toggle />,
+  <GithubRepo />,
   // <SuperClock />,
   document.getElementById('root'),
 );
