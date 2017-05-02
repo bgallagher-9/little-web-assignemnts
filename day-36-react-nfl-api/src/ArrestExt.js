@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import App from './App.js';
+import NFLArrest from './nameSpace.js';
 
 class App2 extends React.Component {
   constructor() {
@@ -12,7 +13,7 @@ class App2 extends React.Component {
   }
   componentDidMount() {
     $.ajax({
-      url: 'http://nflarrest.com/api/v1/player/arrests/' + props.arrested
+      url: 'http://nflarrest.com/api/v1/player/arrests/' //+ props.arrested
     })
     .done((data) => {
       // console.log(data);
@@ -32,6 +33,11 @@ class App2 extends React.Component {
 };
 
 class Details extends React.Component {
+  arrestExt() {
+    let arrested = this.props.name;
+    // console.log(this.props.Name)
+  };
+
   render() {
     return(
       <li className="arrestDeets">
@@ -43,5 +49,5 @@ class Details extends React.Component {
     )
   }
 };
-
+NFLArrest.arrestExt = arrestExt();
 module.exports = App2;

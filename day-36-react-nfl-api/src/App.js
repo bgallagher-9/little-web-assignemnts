@@ -1,43 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 //import './App.css';
+import App2 from './ArrestExt.js';
 import $ from 'jquery';
-
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      people: []
-    };
-  }
-  componentDidMount() {
-    $.ajax({
-      url: 'http://nflarrest.com/api/v1/player'
-    })
-    .done((data) => {
-      // console.log(data);
-      this.setState({
-        people: data
-      });
-    })
-  };
-  render() {
-    let people = this.state.people.map((x, index) => <Athlete key={index} Name={x.Name} TeamName={x.Team_name} TeamCity={x.Team_city} Position={x.Position} ArrestCount={x.arrest_count} />);
-    return (
-      <div>
-        <ol>
-          {people}
-        </ol>
-      </div>
-    );
-  }
-};
+import NFLArrest from './'
 
 class Athlete extends React.Component {
-
-  arrestExt() {
-    let arrested = this.props.name;
-    console.log(this.props.Name)
-  }
 
   render() {
     return(
@@ -51,5 +18,37 @@ class Athlete extends React.Component {
     )
   }
 };
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      people: []
+    };
+  };
+  componentDidMount() {
+    $.ajax({
+      url: 'http://nflarrest.com/api/v1/player'
+    })
+    .done((data) => {
+      // console.log(data);
+      this.setState({
+        people: data
+      });
+    })
+  };
+
+  render() {
+    let people = this.state.people.map((x, index) => <Athlete key={index} Name={x.Name} TeamName={x.Team_name} TeamCity={x.Team_city} Position={x.Position} ArrestCount={x.arrest_count} />);
+    return (
+      <div>
+        <ol>
+          {people}
+        </ol>
+      </div>
+    );
+  }
+};
+NFLArrest.arrestExt(this.props.name);
 
 module.exports = App;
