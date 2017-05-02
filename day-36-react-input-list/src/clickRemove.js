@@ -48,16 +48,4 @@ class App extends React.Component {
     );
   }
 }
-
-// class ShiftEnd extends React.Component {
-//
-//
-//
-//   render() {
-//     return(
-//       doShiftEnd(index)
-//     )
-//   }
-// }
-
 module.exports = ClickRemove;
