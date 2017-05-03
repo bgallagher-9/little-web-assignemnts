@@ -49,7 +49,8 @@ table {
 
 
 header, footer{
-  height: 50px;
+  /*height: 50px;*/
+  clear: both;
   background-color: black;
 }
 
@@ -60,23 +61,37 @@ header h2 {
   padding-top: 8px;
 }
 
+footer h2 {
+  color: white;
+  font-size: 1em;
+  margin-left: 10px;
+  padding-top: 8px;
+  clear: both;
+}
+
 .container {
   width: 80vw;
-  height: 100vh;
+  /*height: 220vh;*/
   margin: 0 auto;
+  min-height: 300px;
+
   /*background-color: blue;*/
 }
 
 .query {
-  height: 30px;
+  /*height: 30px;*/
   border-bottom: 2px solid black;
-  padding-top: 40px;
-  display: block;
+  padding-top: 35px;
+  padding-bottom: 5px;
+  /*display: block;*/
+}
+
+.query h2 {
+  padding: 0 0 3px;
 }
 
 .list, .filter {
   width: 37vw;
-  /*height: 500px;*/
   margin-top: 10px;
 }
 
@@ -87,12 +102,6 @@ header h2 {
 .filter {
   float: right;
 }
-
-/*li {
-  border: 1px solid grey;
-  border-radius: 1%;
-  margin: 5%;
-}*/
 
 .listItem {
   border: 1px solid grey;

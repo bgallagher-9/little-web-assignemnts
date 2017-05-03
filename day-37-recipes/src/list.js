@@ -25,7 +25,12 @@ class List extends React.Component {
   render() {
 
     let foodItems = this.props.recipes.map((x, i) => {
-      return <RecipeList url={x.url} name={x.name} href={x.href} ingredients={x.ingredients} key={i + x.name} />
+      return <RecipeList
+              url={x.url}
+              name={x.name}
+              href={x.href}
+              ingredients={x.ingredients}
+              key={i + x.name} />
       });
       // console.log(foodItems);
     return (

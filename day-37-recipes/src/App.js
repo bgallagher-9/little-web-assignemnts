@@ -9,43 +9,16 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      recipes: [
-        {
-          url: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRTm6IyBRyPt_NTcp9vP-vAz6TutQz_DaFZzOC6EwOU5h_mKdOXrA',
-          name: 'Cheeseburger',
-          ingredients: 'Hamburger meat, Cheese, Burger buns, Pickles, Mustard, Ketchup'
-        },
-        {
-          url: 'http://reyesnypizza.com/images/background.jpg',
-          name: 'Pizza',
-          ingredients: 'Dough, Marinara sauce, Pepperoni, Anchovies, Mozzarella cheese'
-        }
-    ],
-    filter: ['item1', 'item2']
-  };
-  }
-
-  handleFilterRemove(i) {
-    // console.log(this.state.filter.splice(i, 1));
-    let list = this.state.filter.slice();
-    list.splice(i, 1);
-    this.setState({
-      filter: list
-      
-    });
-  }
-
-  handleFilterAdd(input) {
-    let list = this.state.filter.slice();
-    list.push(input);
-    this.setState({
-      filter: list
-    });
+      recipes: [],
+      filter: [],
+      query: ''
+    };
   }
 
   makeAjaxCall() {
     $.ajax({
-      url: '/api/?q=anchovies'
+      url: `/api/?i=${this.state.filter}&q=${this.state.query}`
+      // +
     })
     .done((data) => {
       data = JSON.parse(data);
@@ -60,6 +33,7 @@ class App extends React.Component {
         }
         return {
           name: x.title,
+          href: x.href,
           url: x.thumbnail,
           ingredients: x.ingredients
         }
@@ -70,12 +44,28 @@ class App extends React.Component {
     }
   )}
 
-  componentDidMount() {
-    this.makeAjaxCall();
-  };
+  handleQuery(input) {
+    this.setState({
+      query: input
+    }, () => this.makeAjaxCall());
+  }
 
+  handleFilterRemove(i) {
+    // console.log(i);
+    let list = this.state.filter.slice();
+    list.splice(i, 1);
+    this.setState({
+      filter: list
+    }, () => this.makeAjaxCall());
+  }
+  handleFilterAdd(input) {
+    let list = this.state.filter.slice();
+    list.push(input);
+    this.setState({
+      filter: list
+    }, () => this.makeAjaxCall());
+  }
   render() {
-    // console.log(this.state.filter);
     return (
       <div>
         <header>
@@ -83,7 +73,12 @@ class App extends React.Component {
         </header>
         <div className="container">
           <div className="query">
-            <Query  />
+            <h2>Time to find a recipe.</h2>
+            <Query
+              recipes={this.state.recipes}
+              querySubmit={(input) => this.handleQuery(input)}
+              query={this.state.query}
+               />
           </div>
           <div className="list">
             <List recipes={this.state.recipes} />
@@ -99,7 +94,11 @@ class App extends React.Component {
               />
           </div>
         </div>
-        <footer></footer>
+        <footer>
+          <h2>
+            This app was created using <a href="http://recipepuppy.com">www.recipepuppy.com</a>. No actually puppies were used in these recipes...to the best of my knowledge.
+          </h2>
+        </footer>
       </div>
 
     );

@@ -6,18 +6,20 @@ import './App.css';
 
 
 class Query extends React.Component {
-  // queryThis(evt) {
-  //   if (evt.keyCode === 13) {
-  //     let food = this.props.recipeName.slice();
-  //
-  //   }
-  // }
 
-
+  handleQuery(evt) {
+    // console.log(evt.target.value);
+    if (evt.keyCode === 13) {
+      this.props.querySubmit(evt.target.value);
+      evt.target.value = ''
+    }
+  }
   render() {
+    // console.log('query', this.props.query)
     return(
       <div>
-        <input placeholder="Let's Query!"/>
+        <input placeholder="Let's Query!" onKeyUp={(evt) => {this.handleQuery(evt)}}
+          />
       </div>
     );
   }

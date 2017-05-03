@@ -12,19 +12,15 @@ class Filter extends React.Component {
     }
   }
 
-  filterRemove(i) {
-    this.props.filterTextRemove(i);
-    console.log(this.props.filter[i]);
-  }
-
   render() {
-    // console.log(this.props.filter);
+    // console.log('filter', this.props.filter);
       let foodFilter = this.props.filter.map((x, i) =>
-       <li onClick={(evt) => this.filterRemove(evt, i)} key={i}>{x}</li>);
+       <li onClick={() => this.props.filterTextRemove(i)} key={i}>{x}</li>);
     return (
       <div className="filterIng">
         <h1>Ingredient to filter by: </h1>
-        <input placeholder="Ingredient Filter" onKeyUp={(evt) => {this.filterAdd(evt)}}/>
+        <input
+          placeholder="Ingredient Filter" onKeyUp={(evt) => {this.filterAdd(evt)}}/>
         <ol>
             {foodFilter}
         </ol>
