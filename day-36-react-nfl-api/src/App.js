@@ -37,8 +37,10 @@ class App extends React.Component {
       });
     })
   };
-
+// NFLArrest.arrestExt(this.props.name);
   render() {
+    console.log(this.state.people);
+
     let people = this.state.people.map((x, index) => <Athlete key={index} Name={x.Name} TeamName={x.Team_name} TeamCity={x.Team_city} Position={x.Position} ArrestCount={x.arrest_count} />);
     return (
       <div>
@@ -49,6 +51,6 @@ class App extends React.Component {
     );
   }
 };
-NFLArrest.arrestExt(this.props.name);
+
 
 module.exports = App;

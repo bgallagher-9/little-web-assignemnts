@@ -8,6 +8,13 @@
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
+    "gulp": "latest",
+    "gulp-util": "latest",
+    "gulp-sass": "latest",
+    "gulp-coffee": "latest",
+    "gulp-uglify": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest",
     "react-scripts": "0.9.5"
   },
   "scripts": {

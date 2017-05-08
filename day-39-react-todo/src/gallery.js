@@ -4,7 +4,7 @@ class Gallery extends Component {
   render() {
     return(
       <div>
-      Gallery, yo
+      Gallery, yoasdfasdfasdfasdfasdfas
       </div>
     );
   }

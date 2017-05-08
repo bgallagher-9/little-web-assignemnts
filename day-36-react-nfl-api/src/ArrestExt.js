@@ -49,5 +49,5 @@ class Details extends React.Component {
     )
   }
 };
-NFLArrest.arrestExt = arrestExt();
+// NFLArrest.arrestExt = arrestExt();
 module.exports = App2;
