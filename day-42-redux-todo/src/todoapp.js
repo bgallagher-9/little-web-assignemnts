@@ -28,7 +28,7 @@ class TodoApp extends Component {
     .done((data) => {
       // console.log(data);
        this.getNewItem()
-       console.log(this.state);
+      //  console.log(this.state);
      });
    }
 
@@ -39,16 +39,19 @@ class TodoApp extends Component {
     .done((data) => {
 
       store.dispatch(Object.assign({}, actions.GET_ITEMS, { items: data.items }));
-      console.log(this.state);
+      // console.log(this.state);
     });
   }
 
-  removeNewItem(id) {
+  removeNewItem(id, evt) {
+    evt.stopPropagation();
+
     $.ajax({
       url: `https://spiffy-todo-api.herokuapp.com/api/item/${id}?bucketId=${bucketId}`,
       method: 'DELETE'
     })
     .done((data) => {
+      console.log('delete');
       this.getNewItem();
     })
   }
@@ -56,7 +59,7 @@ class TodoApp extends Component {
   handleKeyUp(keyCode) {
     if (keyCode === 13) {
       this.createNewItem(this.state.todovalue);
-      store.dispatch(Object.assign({}, actions.KEY_UP));
+      store.dispatch(Object.assign({}, actions.RETURN_CLEAR));
     }
   }
 
@@ -65,6 +68,7 @@ class TodoApp extends Component {
   }
 
   toggleItem(id) {
+    console.log('toggle');
     $.ajax({
       url: `https://spiffy-todo-api.herokuapp.com/api/item/${id}/togglestatus?bucketId=${bucketId}`,
       method: 'POST'})
@@ -72,6 +76,7 @@ class TodoApp extends Component {
   }
 
   render() {
+    console.log('render', this.state);
     let todoItems = this.state.items.map((x) => {
       const className = x.isComplete ? 'complete' : '';
       return <li

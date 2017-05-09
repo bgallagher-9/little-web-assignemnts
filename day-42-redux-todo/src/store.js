@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 
 const GET_ITEMS = { type: 'GET_ITEMS' };
-const KEY_UP = { type: 'KEY_UP' };
+const RETURN_CLEAR = { type: 'RETURN_CLEAR' };
 const INPUT_CHANGE = { type: 'INPUT_CHANGE' };
 
 const beginState = {
@@ -13,7 +13,7 @@ const todoReducer = (state = beginState, action) => {
   switch (action.type) {
     case 'INPUT_CHANGE':
       return { todovalue: action.value };
-    case 'KEY_UP':
+    case 'RETURN_CLEAR':
       return { todovalue: '' };
     case 'GET_ITEMS':
       return { items: action.items };
@@ -27,7 +27,7 @@ module.exports = {
   store: store,
   actions: {
     GET_ITEMS: GET_ITEMS,
-    KEY_UP: KEY_UP,
+    RETURN_CLEAR: RETURN_CLEAR,
     INPUT_CHANGE: INPUT_CHANGE
   }
 };
