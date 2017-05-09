@@ -28,7 +28,7 @@ class TodoApp extends Component {
 
   getNewItem() {
     $.ajax({
-      url: `https://spiffy-todo-api.herokuapp.com/api/items?bucketId=${bucketId}`,
+      url: `https://spiffy-todo-api.herokuapp.com/api/items?bucketId=${bucketId}`
       // method: 'GET',
       // data: {
       //   text: todoText
@@ -49,7 +49,7 @@ class TodoApp extends Component {
   removeNewItem(id) {
     $.ajax({
       url: `https://spiffy-todo-api.herokuapp.com/api/item/${id}?bucketId=${bucketId}`,
-      method: 'DELETE',
+      method: 'DELETE'
     })
     .done((data) => {
       this.getNewItem();
